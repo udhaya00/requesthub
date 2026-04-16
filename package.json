@@ -1,0 +1,21 @@
+{
+  "name": "smart-request-hub",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "client": "npm run dev --workspace client",
+    "server": "npm run dev --workspace server",
+    "build": "npm run build --workspace client",
+    "build:client": "npm run build --workspace client",
+    "check:server": "npm run check --workspace server",
+    "ci:check": "npm run check:server && npm run build:client"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

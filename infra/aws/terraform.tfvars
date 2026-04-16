@@ -1,0 +1,9 @@
+project_name              = "smart-request-hub"
+environment               = "prod"
+aws_region                = "ap-south-1"
+backend_desired_count     = 0
+mongo_uri                 = "mongodb+srv://udhaya:test123@cluster1.eic2qko.mongodb.net/?appName=Cluster1"
+jwt_secret                = "d60bdbe44a19be4d49fbcdc75b95eebeef366ee3950b590cb7eca7af8ff32c5b"
+github_repository         = "udhaya00/requesthub"
+github_branch             = "main"
+github_oidc_provider_arn  = "arn:aws:iam::361103952894:oidc-provider/token.actions.githubusercontent.com"
