@@ -1,5 +1,5 @@
 {
-  "version": 0,
+  "version": 1,
   "Resources": [
     {
       "TargetService": {
@@ -7,12 +7,11 @@
         "Properties": {
           "TaskDefinition": "<TASK_DEFINITION>",
           "LoadBalancerInfo": {
-            "ContainerName": "__CONTAINER_NAME__",
-            "ContainerPort": __CONTAINER_PORT__
+            "ContainerName": "smart-request-hub-prod-api",
+            "ContainerPort": 5000
           }
         }
       }
     }
   ]
 }
-
