@@ -27,7 +27,9 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
+        working-directory: infra/aws
         run: terraform init
 
       - name: Terraform Apply
+        working-directory: infra/aws
         run: terraform apply -auto-approve
