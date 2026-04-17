@@ -31,9 +31,10 @@ const Sidebar = ({ collapsed, setCollapsed, user }) => {
       <button
         className="ghost-button sidebar-toggle"
         type="button"
+        aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         onClick={() => setCollapsed((value) => !value)}
       >
-        {collapsed ? "Expand" : "Collapse"}
+        {collapsed ? "›" : "Collapse sidebar"}
       </button>
 
       <nav className="sidebar-nav">
@@ -50,6 +51,14 @@ const Sidebar = ({ collapsed, setCollapsed, user }) => {
           </NavLink>
         ))}
       </nav>
+
+      <div className="sidebar-footer">
+        {!collapsed && (
+          <p>
+            Signed in as <strong>{user?.username}</strong>
+          </p>
+        )}
+      </div>
     </motion.aside>
   );
 };
