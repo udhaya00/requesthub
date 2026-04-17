@@ -15,12 +15,6 @@ resource "aws_ecr_repository" "backend" {
   }
 }
 
-backend "s3" {
-  bucket = "smart-request-hub-prod-361103952894-b89a47"
-  key    = "terraform.tfstate"
-  region = "ap-south-1"
-}
-
 resource "aws_ecr_lifecycle_policy" "backend" {
   repository = aws_ecr_repository.backend.name
 
