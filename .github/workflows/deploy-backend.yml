@@ -89,8 +89,6 @@ jobs:
       - name: Prepare CodeDeploy AppSpec
         run: |
           cp deploy/backend-appspec-template.json appspec.json
-          sed -i "s/__CONTAINER_NAME__/$ECS_CONTAINER_NAME/g" appspec.json
-          sed -i "s/__CONTAINER_PORT__/$ECS_CONTAINER_PORT/g" appspec.json
 
       - name: Deploy updated task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
